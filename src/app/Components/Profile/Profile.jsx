@@ -1,8 +1,10 @@
 import React from 'react'
+import Edit from './Edit'
 
 const Profile = () => {
     return (
         <div>
+          
             <div className='flex justify-center '>
 
 
@@ -17,6 +19,10 @@ const Profile = () => {
                     <div>
                         <h1 className='lg:mx-10 text-center lg:text-left mt-4 text-lg font-bold text-gray-500'>Manishkumar Yadav</h1>
                     </div>
+                    <div className="hidden lg:block">
+                    <Edit />
+                    </div>
+                    
                     <div className='flex justify-center '>
                         <div className='grid mt-14 lg:mt-20 gap-4 lg:gap-8 lg:grid-cols-3'>
                             <div className='bg-gray-50  flex w-auto px-2 h-16 rounded-xl border'>
@@ -38,6 +44,12 @@ const Profile = () => {
                             
                         </div>
                     </div>
+                    <div className='flex justify-center'>
+                    <div className="block lg:hidden">
+                    <Edit />
+                    </div>
+                    </div>
+                   
 
 
                 </div>
