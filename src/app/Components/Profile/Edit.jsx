@@ -3,12 +3,14 @@ import React from 'react'
 const Edit = () => {
   return (
     <div>
-       <div className=' mt-4  mx-24  flex justify-end'>
-                                <div className='grid grid-cols-2 cursor-pointer'>
-                                    <img src='edit.svg' alt='' className='w-6  h-6  my-5' />
-                                <h1 className='text-md  my-5  text-gray-500'>Edit </h1>
-                                </div>
-                            </div>
+      <div className=' mx-6 lg:mx-24  flex justify-end'>
+        <div className=' bg-white flex justify-center  rounded-lg lg:rounded-xl h-10  px-2 cursor-pointer'>
+          
+          <img src='edit.svg' alt='edit profile' className='w-8  h-5 my-3 ' />
+         
+          
+        </div>
+      </div>
     </div>
   )
 }
