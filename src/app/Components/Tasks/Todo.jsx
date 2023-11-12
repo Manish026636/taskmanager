@@ -36,8 +36,9 @@ const Todo = () => {
                   <img class="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800" src="https://images.unsplash.com/photo-1698778573868-75a5c62ab43e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
 
                 </div>
-                <div className='flex justify-end'>
-                  <button className='text-xs bg-[#2194FF] rounded-lg px-4 text-gray-50'>Move to Progress</button>
+                <div className='flex justify-end gap-2'>
+                <button className='text-xs font-semibold cursor-text bg-gray-50 border-2 rounded-lg px-2 text-gray-700'>12-11-2023</button>
+                  <button className='text-xs bg-[#2194FF] rounded-lg px-2 text-gray-50'><img src='rightar.svg' className='w-6 h-6'/></button>
                 </div>
               </div>
             </div>
@@ -64,8 +65,10 @@ const Todo = () => {
                   <img class="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800" src="https://images.unsplash.com/photo-1698778573868-75a5c62ab43e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
 
                 </div>
-                <div className='flex justify-end'>
-                  <button className='text-xs bg-[#2194FF] rounded-lg px-4 text-gray-50'>Move to Progress</button>
+                <div className='flex justify-end gap-2'>
+                <button className='text-xs font-semibold cursor-text bg-gray-50 border-2 rounded-lg px-2 text-gray-700'>05-11-2023</button>
+
+                  <button className='text-xs bg-[#2194FF] rounded-lg px-2 text-gray-50'><img src='rightar.svg' className='w-6 h-6'/></button>
                 </div>
               </div>
             </div>

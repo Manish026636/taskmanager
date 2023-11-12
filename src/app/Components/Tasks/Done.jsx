@@ -37,7 +37,7 @@ const Done = () => {
 
                 </div>
                 <div className='flex justify-end'>
-                  <button className='text-xs bg-[#9400FF] rounded-lg px-4 text-gray-50'>11-11-2023</button>
+                  <button className='text-xs  bg-[#22C8AA] rounded-lg px-4 text-gray-50'>29-10-2023</button>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ const Done = () => {
 
                 </div>
                 <div className='flex justify-end'>
-                  <button className='text-xs bg-[#9400FF] rounded-lg px-4 text-gray-50'>11-11-2023</button>
+                  <button className='text-xs bg-[#22C8AA] rounded-lg px-4 text-gray-50'>01-11-2023</button>
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@ const Done = () => {
 
                 </div>
                 <div className='flex justify-end'>
-                  <button className='text-xs bg-[#9400FF] rounded-lg px-4 text-gray-50'>11-11-2023</button>
+                  <button className='text-xs bg-[#22C8AA] font-semibold rounded-lg px-4 text-gray-50'>02-11-2023</button>
                 </div>
               </div>
             </div>
