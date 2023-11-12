@@ -6,7 +6,7 @@ import Dashboard from './Dashboard'
 const Content = () => {
   return (
     <div>
-   <Profile/>
+   <TaskDashboard/>
     </div>
   )
 }
