@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 
 const Todo = () => {
@@ -6,73 +7,83 @@ const Todo = () => {
       <div className='bg-[#eef2f5] w-full  lg:w-96  h-[77vh] rounded-xl'>
         <div className='grid grid-cols-2'>
           <div className='flex p-4 justify-start'>
-            <h1 className="text-md font-bold text-gray-800">To do</h1>
+            <h1 className="text-md mt-3  font-bold text-gray-800">To do</h1>
           </div>
           <div className='flex gap-4 p-4 justify-end'>
-            <button>
-              <img src="add.svg" className='w-6 h-6' alt="" /></button>
-            <button> <img src="tdots.svg" className='w-6 h-6' alt="" /></button>
+
+
+            {/* Open the modal using document.getElementById('ID').showModal() method */}
+            <button className="btn bg-[#eef2f5]" onClick={() => document.getElementById('my_modal_5').showModal()}><img src="add.svg" className='w-6 h-6' alt="" /></button>
+            <dialog id="my_modal_5" className=" modal modal-bottom sm:modal-middle">
+              <div className="modal-box ">
+                <h3 className="font-bold text-center text-lg mb-4">Add Task</h3>
+                <div className='flex flex-wrap justify-center'>
+
+              
+                <input type="text" placeholder="Priority" className="input input-bordered mb-2  input-md w-full max-w-xs" />
+                <input type="text" placeholder="Task Heading" className="input input-bordered mb-2  input-md w-full max-w-xs" />
+                <input type="text" placeholder="Task Details" className="input mb-2 input-bordered  input-md w-full max-w-xs" />
+                <input type="text" placeholder="Assign to" className="input input-bordered  input-md w-full max-w-xs" />
+                </div>
+                <div className="flex justify-center modal-action">
+                  <form method="dialog">
+                    <button className="btn">Close</button>
+                  </form>
+                  <button type='submit' className="btn bg-blue-500 text-white ">Submit</button>
+                </div>
+              </div>
+            </dialog>
+            <button className="btn bg-[#eef2f5] border border-gray-300  text-red-400" onClick={() => document.getElementById('my_modal_1').showModal()}>
+              Delete all
+            </button>
+            <dialog id="my_modal_1" className="modal">
+              <div className="modal-box">
+                <h3 className="font-bold text-lg">Hello!</h3>
+                <p className="py-4">Press ESC key or click the button below to close</p>
+                <div className="modal-action">
+                  <form method="dialog">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
         <div className='flex flex-wrap mt-4 justify-center'>
           <div className='bg-white w-full mx-6 h-auto py-4 rounded-2xl'>
             <div className='grid grid-cols-2'>
               <div className='flex px-4 pt-2 justify-start'>
-                <img src='green.png' className='w-4 h-4' alt='' />
-                <h1 className=' text-[10px] text-gray-400 uppercase font-medium'>Design System</h1>
+                <img src='green.png' className='w-4 mt-3 h-4' alt='' />
+                <h1 className=' text-[10px] text-gray-400 mt-3 uppercase font-medium'>Priority</h1>
               </div>
               <div className='flex px-4 relative -top-1 pt-2 justify-end'>
-                <button> <img src="tdots.svg" className='w-6 h-6' alt="" /></button>
+                <div className="dropdown  dropdown-bottom dropdown-end">
+                  <div tabIndex={0} role="button" className="btn bg-white m-1"> <img src="tdots.svg" className='w-6 h-6' alt="" /></div>
+                  <ul className="dropdown-content border border-gray-300 z-[1] menu p-2 shadow-xl bg-base-100 rounded-box w-52">
+                    <li className='text-red-400'><a>Delete</a></li>
+                    <li className='text-blue-400'><a>Update</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <h1 className='px-4 pt-1 text-lg font-bold '>Hero Section</h1>
-            <p className='px-4 pt-2 text-xs text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-              molestiae quas vel sint commodi repudiandae
+            <h1 className='px-4 pt-1 text-lg font-bold '>Task Heading</h1>
+            <p className='px-4 pt-2 text-xs text-gray-600'>Task Details
             </p>
             <div class=" pt-4 px-4">
               <div className='grid grid-cols-2'>
                 <div className='flex  -space-x-4 justify-start'>
-                  <img class="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800" src="https://images.unsplash.com/photo-1699343481899-b20bd561c64e?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                  <img class="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800" src="https://images.unsplash.com/photo-1698778573868-75a5c62ab43e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                <h1 className='pt-1 text-md text-gray-500 font-semibold '>Assign to</h1>
 
                 </div>
-                <div className='flex justify-end gap-2'>
-                <button className='text-xs font-semibold cursor-text bg-gray-50 border-2 rounded-lg px-2 text-gray-700'>12-11-2023</button>
-                  <button className='text-xs bg-[#2194FF] rounded-lg px-2 text-gray-50'><img src='rightar.svg' className='w-6 h-6'/></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='bg-white mt-4 w-full mx-6 h-auto py-4 rounded-2xl'>
-            <div className='grid grid-cols-2'>
-              <div className='flex px-4 pt-2 justify-start'>
-                <img src='blue.png' className='w-4 h-4' alt='' />
-                <h1 className=' text-[10px] text-gray-400 uppercase font-medium'>Typography</h1>
-              </div>
-              <div className='flex px-4 relative -top-1 pt-2 justify-end'>
-                <button> <img src="tdots.svg" className='w-6 h-6' alt="" /></button>
-              </div>
-            </div>
-
-            <h1 className='px-4 pt-1 text-lg font-bold '>Typography change</h1>
-            <p className='px-4 pt-2 text-xs text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-              molestiae quas vel sint commodi repudiandae
-            </p>
-            <div class=" pt-4 px-4 ">
-              <div className='grid grid-cols-2'>
-                <div className='flex  -space-x-4 justify-start'>
-                  <img class="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800" src="https://images.unsplash.com/photo-1699343481899-b20bd561c64e?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                  <img class="w-8 h-8 border-2 border-white rounded-full dark:border-gray-800" src="https://images.unsplash.com/photo-1698778573868-75a5c62ab43e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-
-                </div>
-                <div className='flex justify-end gap-2'>
-                <button className='text-xs font-semibold cursor-text bg-gray-50 border-2 rounded-lg px-2 text-gray-700'>05-11-2023</button>
-
-                  <button className='text-xs bg-[#2194FF] rounded-lg px-2 text-gray-50'><img src='rightar.svg' className='w-6 h-6'/></button>
+                <div className='flex items-center justify-end gap-2'>
+                  <p className='text-xs py-2 font-semibold cursor-text bg-gray-50 border-2 rounded-lg px-2 text-gray-700'>Date here</p>
+                  <button className='text-xs py-1 bg-[#2194FF] rounded-lg px-2 text-gray-50'><img src='rightar.svg' className='w-6 h-6' /></button>
                 </div>
               </div>
             </div>
           </div>
+
 
         </div>
       </div>

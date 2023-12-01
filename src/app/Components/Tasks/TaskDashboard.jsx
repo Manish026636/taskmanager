@@ -10,7 +10,7 @@ const TaskDashboard = () => {
       <div class="px-6 ">
 
         <div
-          class="flex mt-4 items-center justify-center">
+          class="flex  items-center justify-center">
 
           <div>
             <div className='grid  lg:grid-cols-3 gap-6'>
